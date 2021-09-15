@@ -31,14 +31,24 @@ const age = 26;
 // }
 // console.log('Now you\'re ready to go outside!');
 
-if (isCitizen && age > 18) {
-  console.log('You are eligible to vote.');
-}
+// if (isCitizen && age > 18) {
+//   console.log('You are eligible to vote.');
+// }
 
-if (temperature < -40 || temperature > 40) {
-  console.log('Maybe going outside isn\'t such a great idea...');
-}
+// if (temperature < -40 || temperature > 40) {
+//   console.log('Maybe going outside isn\'t such a great idea...');
+// }
 
-if (!raining) {
-  console.log('Leave your umbrella at home!');
+// if (!raining) {
+//   console.log('Leave your umbrella at home!');
+// }
+
+// Conditionals - whichSchool
+
+if (age < 13) {
+  return 'Elementary School';
+} else if (age >= 13 && age <= 18) {
+  return 'Secondary School';
+} else {
+  return 'Lighthouse Labs';
 }
