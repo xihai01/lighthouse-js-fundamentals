@@ -45,10 +45,35 @@ const age = 26;
 
 // Conditionals - whichSchool
 
-if (age < 13) {
-  return 'Elementary School';
-} else if (age >= 13 && age <= 18) {
-  return 'Secondary School';
-} else {
-  return 'Lighthouse Labs';
-}
+// if (age < 13) {
+//   return 'Elementary School';
+// } else if (age >= 13 && age <= 18) {
+//   return 'Secondary School';
+// } else {
+//   return 'Lighthouse Labs';
+// }
+
+var opinion = "This nanodegree is amazing";
+
+// Function scope
+function showMessage() {
+    // Local variable, visible within the function `showMessage`
+    var message = "I am an Udacian!"; 
+
+    // Block scope
+    {
+          var greet = "How are you doing?";
+        /*
+         * We have used the keyword `let` to declare a variable `greet` because variables declared with the `var` keyword can not have Block Scope. 
+         */
+    } // block scope ends
+
+    console.log( message ); // OK
+    console.log( greet ); // ERROR. 
+    // Variable greet can NOT be used outside the block
+
+    console.log( opinion ); // OK    to use the gobal variable anywhere in the code
+
+} // function scope ends
+
+showMessage();
